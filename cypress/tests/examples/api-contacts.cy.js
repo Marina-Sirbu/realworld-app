@@ -1,8 +1,8 @@
-describe('Contacts', () => {
+describe("Contacts", () => {
   let users;
 
   before(() => {
-    cy.fixture('users').then(data => {
+    cy.fixture("users").then((data) => {
       users = data;
     });
   });
@@ -11,13 +11,13 @@ describe('Contacts', () => {
     cy.loginByApi(users.testuser.username, users.testuser.password);
   });
 
-  it.only('should get contacts', () => {
+  it.only("should get contacts", () => {
     cy.request({
-      method: 'GET',
+      method: "GET",
       url: `${Cypress.env("apiUrl")}/transactions/contacts`,
-    }).then(response => {
+    }).then((response) => {
       expect(response.status).to.eq(200);
-      expect(response.body).to.have.property('results');
+      expect(response.body).to.have.property("results");
     });
   });
 });
