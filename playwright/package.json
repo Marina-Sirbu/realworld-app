@@ -1,0 +1,22 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test:all": "playwright test --project='Test'",
+    "test:api": "playwright test --grep @api --project='Test'",
+    "test:ui": "playwright test --grep @ui --project='Test'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "16.14.2",
+    "@faker-js/faker": "^1.0.0"
+  }
+}
